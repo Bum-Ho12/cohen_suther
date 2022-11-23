@@ -49,6 +49,7 @@ def CohenSutherlandClippingAlgorithm(x1, y1, x2, y2):
             else:
                 code_out = code2
             if code_out & 8:
+                # method to clip the drawn line to get correct measurements.
                 x = x1 + (x2 - x1) * (p1[1] - y1) / (y2 - y1)
                 y = p1[1]
             elif code_out & 4:
@@ -81,7 +82,7 @@ def clip(x1, y1, x2, y2):
     CohenSutherlandClippingAlgorithm(x1, y1, x2, y2)
 
 if __name__ == '__main__':
-    # Enter two points for draw a line
+    # Enter two points to draw a line
 
     # point 1
     x1 = int(input("Point1 x1: "))
